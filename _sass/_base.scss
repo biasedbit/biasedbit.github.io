@@ -93,7 +93,7 @@ aside {
 
   > :last-child {
     margin-bottom: 0;
-  }  
+  }
 }
 
 blockquote {
@@ -152,7 +152,7 @@ hr {
     font-size: 1.4em;
     margin: 1.8em 0 0 0;
   }
-  
+
   > p.datetime {
     color: #999;
     font-size: 0.7em;
@@ -172,6 +172,10 @@ hr {
   margin: 15px auto;
   line-height: 1.7em;
   text-align: center;
+}
+
+.link-section > h2 {
+  margin-bottom: 10px;
 }
 
 .link-section > ul {
