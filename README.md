@@ -1,12 +1,8 @@
-# Personal page
+# BiasedBit
 
-Personal page built with Jekyll and hosted on GitHub Pages.
+Source for [biasedbit.com](https://biasedbit.com).
 
-## Prerequisites
-
-- Ruby 3.4.2 or higher
-- Bundler
-- Git
+Built with [Hugo](https://gohugo.io/) and hosted on [GitHub Pages](https://pages.github.com/).
 
 ## Setup
 
@@ -17,41 +13,47 @@ Personal page built with Jekyll and hosted on GitHub Pages.
    cd biasedbit.github.io
    ```
 
-2. Install dependencies:
+2. Install tools (if not already installed):
+
    ```bash
-   bundle install
+   mise install
    ```
 
-## Development
+3. Start the development server:
 
-To run the site locally:
+   ```bash
+   mise run dev
+   ```
 
-```bash
-bundle exec jekyll serve
-```
+4. Build for production:
 
-This will start a local server at `http://localhost:4000`. The site will automatically rebuild when you make changes to the source files.
+   ```bash
+   mise run build
+   ```
 
-## Building for Production
-
-To build the site for production:
-
-```bash
-bundle exec jekyll build
-```
-
-The built site will be available in the `_site` directory.
+The site will be available at `http://localhost:1313` during development.
 
 ## Deployment
 
-This site is automatically deployed to GitHub Pages when changes are pushed to the main branch. No manual deployment is needed.
+The site is automatically deployed to GitHub Pages via GitHub Actions when changes are pushed to the `main` branch.
 
 ## Project Structure
 
-- `_includes/` - Reusable components
-- `_layouts/` - Page templates
-- `_sass/` - SCSS files
-- `css/` - Compiled CSS files
-- `images/` - Image assets
-- `_config.yml` - Site configuration
-- `index.html` - Homepage
+```
+.
+├── .github/workflows/    # GitHub Actions deployment
+├── layouts/             # HTML templates
+├── static/              # Static files (CSS, images, etc.)
+├── hugo.toml           # Hugo configuration
+└── .mise.toml          # Tool management configuration
+```
+
+## Useful Commands
+
+- `mise dev` - Start development server
+- `mise build` - Build for production
+- `mise clean` - Complete cleanup
+
+## License
+
+This project is licensed under the MIT License.

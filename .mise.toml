@@ -1,0 +1,14 @@
+[tools]
+  "ubi:gohugoio/hugo" = { version = "latest", matching = "extended_withdeploy" }
+  # To run 'serve' (prod target)
+  node = "24"
+
+[env]
+  HUGO_ENV = "production"
+  HUGO_ENABLEGITINFO = "true"
+
+[tasks]
+  dev = "hugo server --bind 0.0.0.0 --port 1313"
+  build = "hugo --minify"
+  prod = "hugo --minify && npx serve public -p 8000"
+  clean = "rm -rf public/ resources/ .hugo_build.lock hugo_stats.json"

@@ -1,0 +1,284 @@
+@charset "utf-8";
+
+/* Import Google Fonts */
+@import url(https://fonts.googleapis.com/css?family=Merriweather);
+
+/* Variables */
+:root {
+  --header-font-family: 'Merriweather', Georgia, 'Times New Roman', serif;
+  --content-font-family: 'Avenir Next', sans-serif;
+  --code-font-family: source-code-pro, Menlo, "Bitstream Vera Sans Mono", "Lucida Console", Terminal, monospace;
+  --base-font-size: 17px;
+  --small-font-size: 14.875px;
+  --base-line-height: 1.5;
+  --spacing-unit: 30px;
+  --text-color: #555;
+  --background-color: #fcfcfc;
+  --brand-color: #689;
+  --brand-color-2: #966;
+  --grey-color: #828282;
+  --grey-color-light: #e5e5e5;
+  --grey-color-dark: #5a5a5a;
+  --content-width: 650px;
+}
+
+/* Reset some basic elements */
+body, h1, h2, h3, h4, h5, h6,
+p, blockquote, pre, hr,
+dl, dd, ol, ul, figure {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Basic styling */
+body {
+  font-family: var(--content-font-family);
+  font-size: var(--base-font-size);
+  line-height: var(--base-line-height);
+  font-weight: 400;
+  color: var(--text-color);
+  background-color: var(--background-color);
+  -webkit-text-size-adjust: 100%;
+}
+
+/* Set `margin-bottom` to maintain vertical rhythm */
+h1, h2, h3, h4, h5, h6,
+p, blockquote, pre,
+ul, ol, dl, figure {
+  margin-bottom: calc(var(--spacing-unit) / 2);
+}
+
+img {
+  vertical-align: middle;
+  text-align: center;
+  background-color: var(--background-color);
+  max-width: 100%;
+}
+
+figure > img {
+  display: block;
+  max-width: 90%;
+  margin: 0.5em auto;
+}
+
+figcaption {
+  font-size: var(--small-font-size);
+  text-align: center;
+  margin-bottom: 2em;
+}
+
+ul, ol {
+  margin-left: var(--spacing-unit);
+}
+
+ul > li, ol > li {
+  margin-bottom: 0.4em;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--header-font-family);
+  font-weight: 500;
+}
+
+a {
+  color: var(--brand-color);
+  text-decoration: none;
+}
+
+a:visited {
+  color: #5a7a9a;
+}
+
+a:hover {
+  color: var(--text-color);
+  text-decoration: none;
+}
+
+a > code {
+  color: inherit;
+}
+
+aside {
+  color: var(--grey-color);
+  border-left: 4px solid var(--grey-color-light);
+  padding-left: calc(var(--spacing-unit) / 2);
+  font-weight: 400;
+  font-size: 0.9em;
+}
+
+aside > h1 {
+  font-size: 0.9em;
+  font-weight: 600;
+}
+
+aside > :last-child {
+  margin-bottom: 0;
+}
+
+blockquote {
+  color: var(--grey-color);
+  border-left: 4px solid var(--grey-color-light);
+  padding-left: calc(var(--spacing-unit) / 2);
+  font-weight: 400;
+  font-size: 0.9em;
+}
+
+blockquote > :last-child {
+  margin-bottom: 0;
+}
+
+pre, code {
+  font-family: var(--code-font-family);
+}
+
+code {
+  font-size: 15px;
+  font-style: normal;
+  color: #111;
+}
+
+pre {
+  padding: 8px 12px;
+  overflow-x: scroll;
+  border: 1px solid #efefef;
+  border-radius: 3px;
+  background-color: #f9f9f9;
+}
+
+pre > code {
+  font-size: 12.5px;
+  line-height: 1em;
+  color: var(--text-color);
+}
+
+hr {
+  margin: 40px 5px;
+  height: 0;
+  border: 0;
+  border-top: 1px solid var(--grey-color-light);
+}
+
+/* Layout */
+main {
+  margin: 5em auto;
+  max-width: calc(var(--content-width) - (var(--spacing-unit) * 2));
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: var(--spacing-unit);
+  padding-left: var(--spacing-unit);
+}
+
+@media screen and (max-width: 650px) {
+  main {
+    max-width: calc(var(--content-width) - var(--spacing-unit));
+    padding-right: calc(var(--spacing-unit) / 2);
+    padding-left: calc(var(--spacing-unit) / 2);
+  }
+}
+
+/* Home page avatar section */
+#avatar {
+  text-align: center;
+  margin-bottom: 2em;
+}
+
+#avatar > img {
+  width: 192px;
+  border: #aaa 2px solid;
+  border-radius: 128px;
+}
+
+#avatar > h1 {
+  font-size: 2em;
+  font-weight: 600;
+  line-height: 1.2em;
+  margin-top: 0.8em;
+  margin-bottom: 0.4em;
+}
+
+#avatar > h2 {
+  font-size: 1.1em;
+  font-weight: 400;
+  color: #777;
+  margin: 1.2em;
+}
+
+#avatar > h3 {
+  font-weight: 300;
+  font-size: 1.0em;
+  color: #999;
+  margin: 0.5em;
+}
+
+#avatar > h4 {
+  font-weight: 300;
+  font-size: 0.8em;
+  color: #999;
+  margin: 0.5em;
+}
+
+/* Link section */
+.link-section {
+  margin: 15px auto;
+  line-height: 1.7em;
+  text-align: center;
+}
+
+.link-section > h2 {
+  margin-bottom: 10px;
+}
+
+.link-section > ul {
+  list-style-type: none;
+  margin: 0;
+}
+
+.link-section > ul > li {
+  margin-bottom: 0;
+}
+
+/* Error page */
+.error-page {
+  text-align: center;
+  padding: 4em 0;
+}
+
+.error-page h1 {
+  font-size: 6em;
+  color: var(--brand-color);
+  margin-bottom: 0.2em;
+}
+
+.error-page h2 {
+  font-size: 2em;
+  margin-bottom: 1em;
+}
+
+.error-page .back-home {
+  display: inline-block;
+  margin-top: 2em;
+  padding: 0.5em 1em;
+  border: 2px solid var(--brand-color);
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.error-page .back-home:hover {
+  background-color: var(--brand-color);
+  color: white;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 2em 0;
+  color: var(--grey-color);
+  font-size: 0.9em;
+  border-top: 1px solid var(--grey-color-light);
+  margin-top: 4em;
+}
