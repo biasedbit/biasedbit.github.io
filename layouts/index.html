@@ -1,0 +1,23 @@
+{{ define "main" }}
+<section id="avatar">
+  <img src="/images/bruno.jpg" alt="me" />
+  <h1>Bruno de Carvalho</h1>
+  <h3>Senior Software Engineer @ AWS Route 53</h3>
+  <h4>
+    Previously Platform Engineer at <a href="https://cash.app">CashApp</a> & <a href="https://squareup.com" target="_blank">Square</a>,<br>
+    Director of Mobile at <a href="https://hillaryclinton.com" target="_blank">Hillary for America</a>, <a href="https://timehop.com/" target="_blank">Timehop</a> &amp; <a href="https://livestream.com" target="_blank">Livestream</a>
+  </h4>
+</section>
+
+<section id="craft" class="link-section">
+  <h2>Get in touch</h2>
+  <ul>
+    <li><a href="mailto:{{ .Site.Params.email }}">Email</a></li>
+    <li><a href="http://github.com/{{ .Site.Params.github_username }}">GitHub</a></li>
+    <li><a href="http://linkedin.com/in/{{ .Site.Params.linkedin_username }}">LinkedIn</a></li>
+    <li><a href="http://twitter.com/{{ .Site.Params.twitter_username }}">Twitter</a></li>
+    <li><a href="http://instagram.com/{{ .Site.Params.instagram_username }}">Instagram</a></li>
+    <li><a href="https://medium.com/@{{ .Site.Params.medium_username }}">Medium</a></li>
+  </ul>
+</section>
+{{ end }}

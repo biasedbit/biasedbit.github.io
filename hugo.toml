@@ -1,0 +1,25 @@
+baseURL = 'https://biasedbit.com/'
+languageCode = 'en-us'
+title = 'BiasedBit'
+
+[params]
+  author = 'Bruno de Carvalho'
+  email = 'bruno@biasedbit.com'
+  twitter_username = 'biasedbit'
+  github_username = 'biasedbit'
+  linkedin_username = 'biasedbit'
+  instagram_username = 'biasedbit'
+  medium_username = 'biasedbit'
+  googleAnalytics = 'G-S4V9765TXN'
+
+[markup]
+  [markup.highlight]
+    style = 'monokai'
+    noClasses = false
+
+[server]
+  bind = '0.0.0.0'
+  port = 1313
+
+[build]
+  writeStats = true
